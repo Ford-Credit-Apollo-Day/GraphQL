@@ -153,6 +153,6 @@ type User @key(fields: "id") {
 #"""
 #A Subscription for whenever a new review has been added.
 #"""
-#type Subscription {
-#ADD SUBSCRIPTION FIELDS AND RETURN TYPES HERE
-#}
+type Subscription {
+reviewAdded: Review
+}
