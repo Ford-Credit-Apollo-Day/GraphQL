@@ -1,6 +1,13 @@
 extend schema
   @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@key"])
 
+type Review @key(fields: "id") {
+  id: Int!
+  body: String!
+  product: Product!
+  user: User!
+}
+
 type Query {
   """
   Get all available products to shop for. Optionally provide some search filters
